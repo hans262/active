@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "outDir": "./dist",
+    //保留map用于调试
+    "sourceMap": true,
+    //删除注释
+    "removeComments": true,
+    //装饰器
+    "experimentalDecorators": true,
+    //提升代码健壮性
+    "strict": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "javascript", "typescript"
+  ]
+}
