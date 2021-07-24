@@ -43,16 +43,15 @@
  - E:checked      处于选中checkbox的样式(用于input type为radio与checkbox时)
 
 ## 伪元素
-
  - E::after
  - E::before
 
 ## 选择器
-
  - E *            E元素下的所有元素
  - E > F          E元素下的所有子元素F
  - E + F          紧贴在E元素之后F元素
  - E ~ F          E元素所有兄弟元素F
+ - :not(E)        非E元素的所有元素
 
 ``` css
   /* 三角形 */
