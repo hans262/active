@@ -64,16 +64,13 @@
 
   解决方案
   1. 使用hashHistory
-  2. 将404.html添加到build文件夹中
+  2. 将404.html添加到build文件夹中，然后在404.html中重定向到index.html
 
+  发布NPM包：
+  先切换到官方源，使用 npm login 登陆
+  执行发布命令 npm publish 
+  若发布不成功 检查版本号是否更新，检查包名是否重复
 
-
-  发布包：
-  先切换到官方源
-  再使用 npm login登陆
-  执行 npm publish 检查版本号是否更新 否则发布不成功
-
-  删除发布的包
-  npm unpublish 包名 --force
-
+  删除发布的包：
+  npm unpublish [包名] --force
 ```

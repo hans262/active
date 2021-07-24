@@ -1,31 +1,34 @@
 # GIT
-dqwqw
-## 全局配置
-### 查看
-- git config --list 列出所有配置信息
+现代流行的版本管理工具。
+
+## 初次配置
+列出和查看配置信息
+- git config --list
 - git config user.name
 - git config user.email
 
-### 设置
+修改配置信息，用户名和邮箱，每一次 Git 提交都会使用这些信息。
 - git config --global user.name [name]  
 - git config --global user.email [email]
 
-## 创建仓库
-### 初始化本地仓库
+
+## 获取一个GIT仓库
+将本地目录转换为git仓库
 - git init
 - git init [folder_name] 自动创建文件夹
 
-### 克隆远程仓库
+从其它服务器克隆一个已存在的 Git 仓库
 - git clone [远程库地址]
-- git clone [远程库地址] [自定义文件夹名]
+- git clone [远程库地址] [folder_name]
 
-## 本地提交
-1. 添加到暂存区
-git add .
-2. 提交commits
-git commit -m [注释]
+## 记录每次更新到仓库
+添加到暂存区
+- git add .
 
-### 放弃修改
+提交更新
+- git commit -m [注释]
+
+放弃修改
 - git checkout [file_name]
 
 ## 状态/日志
@@ -109,12 +112,11 @@ ssh-keygen -t rsa -C [email]
 ```
 
 ## github多人开发概念
-
 - organization 组织
 - team 团队
 - repository 仓库
 
-### 操作流程
+操作流程
 1. 创建组织，在组织中创建一个仓库
 2. 创建团队，向团队中添加github成员
 3. 为组织中的仓库添加一个创建好的团队
