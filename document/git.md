@@ -1,5 +1,5 @@
 # GIT
-
+dqwqw
 ## 全局配置
 ### 查看
 - git config --list 列出所有配置信息
