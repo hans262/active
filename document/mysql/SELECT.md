@@ -37,3 +37,25 @@ SELECT * FROM user ORDER BY password
 SELECT * FROM user ORDER BY password DESC
 
 ### LIMIT 返回条数
+
+
+## table
+数据库表的一些操作
+
+```sql
+
+-- 增加一个字段
+ALTER TABLE [表名] ADD [字段名] [类型]
+AlTER TABLE user UPDATE create_at TIMESTAMP
+
+-- 修改一个字段
+AlTER TABLE [表名] CHANGE [字段名] [更新后的字段名] [类型] [规则]
+AlTER TABLE user CHANGE create_at create_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+
+let users = await Query<any>(`AlTER TABLE user CHANGE age age int(3)`)
+  // console.log(users)
+
+  let list = await Query<any>(`SELECT * FROM user ORDER BY create_at DESC`)
+  console.log(list)
+
+```
