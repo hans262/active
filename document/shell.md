@@ -1,6 +1,7 @@
 # SHELL
 
 - ls 列出目录
+- ls -a 包括隐藏文件
 - mkdir [folder_name] 创建文件夹
 - touch [file_name] 创建文件
 - rm [file_name] 删除文件
