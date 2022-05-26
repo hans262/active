@@ -5,72 +5,69 @@
   * 查看全局包
   > npm ls -g --depth 0
 
-  * 加入到生产阶段依赖
-  > npm install react -S
+  * 安装到生产依赖
+  > npm i react -S
 
-  * 加入到开发阶段依赖
-  > npm install react -D
+  * 安装到开发依赖
+  > npm i react -D
+
+  * 安装到全局
+  > npm i react -g
 
   * 安装指定版本
-  > npm install react@16.8.2
+  > npm i react@16.8.2
+
+  * 安装最新版本
+  > npm i react@latest
 
   * 初始化项目
   > npm init my-app
 
   * 卸载包
-  > npm uninstall react -S|-D
+  > npm uni react
 
-  * 修复包
-  > npm audit fix
-
-  * 得到检查报告
-  > npm audit --json
-
-  * 更新包
-  > npm update react
-  > npm update -g
-
+  yarn add
+  yarn remove
+  yarn install
+  
 ```
 
 ## 配置
 ```
-  * 全局包安装位置修改
-  > npm config set prefix "D:\nodejs\node_global"
+  * 发布NPM包
+  - 先切换到官方源，
+  - d使用 npm login 登陆
+  - 执行发布 npm publish
+  若发布不成功 检查版本号是否更新，检查包名是否重复
 
-  * 缓存目录修改
-  > npm config set cache "D:\nodejs\node_cache"
+  * 删除发布的npm包
+  npm unpublish [包名] --force
 
-  * 全局包安装路径
-  > npm root -g
-
-  * 镜像地址查看
+  * npm镜像地址 https://registry.npmjs.org/
   > npm get registry
-
-  * 官方镜像地址
-  https://registry.npmjs.org/
-
-  * 淘宝镜像地址
   > npm config set registry https://registry.npm.taobao.org
   > npm config set disturl https://npm.taobao.org/dist/
 
-  * yarn镜像地址
+  * yarn镜像地址 https://registry.yarnpkg.com
+  > yarn config get registry
   > yarn config set registry https://registry.npm.taobao.org
   > yarn config set disturl https://npm.taobao.org/dist/
 
-  github 拉取慢可修改以下地址
+  * github 镜像地址
   https://github.com.cnpmjs.org/ounana/glow.git
 
-  github 默认是不支持pushState历史API的路由器browserHistory
-
-  解决方案
-  1. 使用hashHistory
+  * gitpage静态发布
+  默认不支持browserHistory路由，解决方案：
+  1. 使用hashHistory路由
   2. 将404.html添加到build文件夹中，然后在404.html中重定向到index.html
+```
 
-  发布NPM包：
-  先切换到官方源，使用 npm login 登陆
-  执行发布命令 npm publish 
-  若发布不成功 检查版本号是否更新，检查包名是否重复
+## node
+```
+  * 切换node版本
+  npm i n -g
 
-  删除发布的包：
-  npm unpublish [包名] --force
+  sudo n lts 安装最新版本
+  sudo n 14.17.4 安装指定版本
+
 ```
