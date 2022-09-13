@@ -121,3 +121,34 @@ ssh-keygen -t rsa -C [email]
 2. 创建团队，向团队中添加github成员
 3. 为组织中的仓库添加一个创建好的团队
 4. 为该团队设置可访问该仓库的权限，merge/push等
+
+
+## git 切换分支 如何不提交内容
+
+把当前修改 提交到缓存
+git stash
+git stash save 'message'
+
+查看缓存列表
+git stash list
+
+读取最后一个缓存，并删除缓存列表中的该项目
+git stash pop
+
+
+git stash apply stash@{n} // 读取指定缓存 不会自动删除
+git stash drop stash@{n} // 手动删除指定缓存
+
+
+
+## 回退版本
+git reset [--soft| --hard] [HEAD]
+
+--hard 直接删除
+--soft 保留到暂存区
+
+回退本地版本
+git reset HEAD^   到上一个版本
+
+与远端保持一致，强制推送即可
+git push -f

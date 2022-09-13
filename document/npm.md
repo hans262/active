@@ -70,3 +70,26 @@
   sudo n lts 安装最新版本
   sudo n 14.17.4 安装指定版本
 ```
+
+
+## npm 常用的库
+
+- resize-observer-polyfill
+监控任意dom元素宽高发生变化
+
+
+- simplebar-react
+React 的滚动条插件
+
+- swiper
+幻灯片组件
+
+- react-dnd
+React 拖拽库
+
+- react-lazy-load-image-component
+React 图片懒加载库
+
+- react-masonry-css
+React 砖体布局
+
