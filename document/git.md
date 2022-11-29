@@ -152,3 +152,11 @@ git reset HEAD^   到上一个版本
 
 与远端保持一致，强制推送即可
 git push -f
+
+
+## git只合并某个分支某一次提交的commit
+把A分支的提交，合并到B分支。
+
+git checkout B
+git cherry-pick [A分支的commits.id]
+git push
