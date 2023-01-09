@@ -32,17 +32,8 @@
   
 ```
 
-## 配置
+## NPM配置
 ```
-  * 发布NPM包
-  - 先切换到官方源，
-  - d使用 npm login 登陆
-  - 执行发布 npm publish
-  若发布不成功 检查版本号是否更新，检查包名是否重复
-
-  * 删除发布的npm包
-  npm unpublish [包名] --force
-
   * npm镜像地址 https://registry.npmjs.org/
   > npm get registry
   > npm config set registry https://registry.npm.taobao.org
@@ -52,31 +43,40 @@
   > yarn config get registry
   > yarn config set registry https://registry.npm.taobao.org
   > yarn config set disturl https://npm.taobao.org/dist/
+```
 
-  * github 镜像地址
-  https://github.com.cnpmjs.org/ounana/glow.git
-
-  * gitpage静态发布
-  默认不支持browserHistory路由，解决方案：
+## github-page 静态资源托管
+  - 默认不支持browserHistory路由的解决方案：
   1. 使用hashHistory路由
-  2. 将404.html添加到build文件夹中，然后在404.html中重定向到index.html
-```
+  2. 将index.html文件拷贝一份命名为404.html文件，
+  服务器未找到接口会去调用404.html。
 
-## node
+## npm 发布包
+  - 发布包
+  1. 先切换到官方源，
+  2. 使用 npm login 登陆
+  3. 执行发布 npm publish
+
+  若发布不成功：检查版本号是否更新、包名是否重复
+
+  - 删除包
+  npm unpublish [包名] --force
+
+## node版本管理
+  - n
+  适用于mac
 ```
-  * 切换node版本
   npm i n -g
-
   sudo n lts 安装最新版本
   sudo n 14.17.4 安装指定版本
 ```
-
+  - nvm
+  适用于windows
 
 ## npm 常用的库
 
 - resize-observer-polyfill
 监控任意dom元素宽高发生变化
-
 
 - simplebar-react
 React 的滚动条插件
@@ -92,4 +92,3 @@ React 图片懒加载库
 
 - react-masonry-css
 React 砖体布局
-

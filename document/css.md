@@ -8,6 +8,18 @@
  - px    像素
  - %     相对于相对于父元素倍数单位
 
+## 函数、变量
+ - calc(100% - 100px)     css函数计算
+ - linear-gradient(to right, red , blue) 线性渐变函数
+ - linear-gradient(to bottom right, red , blue)
+ - rgba(0, 0, 0, .9)             有透明度
+ - rgb(0, 0, 0)                  红 绿 蓝 三色
+
+ - --bg: blue  定义变量
+ - var(--bg)  调用变量
+
+ - transparent 透明色
+
 ## 属性
  - vertical-align: middle        垂直对其img元素等
  - letter-spacing                字体间距
@@ -20,13 +32,6 @@
  - white-space: nowrap           禁止换行
  - text-overflow: ellipsis       修剪文本
  - overflow: hidden              必须
- - rgba(0, 0, 0, .9)             有透明度
- - rgb(0, 0, 0)                  红 绿 蓝 三色
-
- - linear-gradient(to right, red , blue)           线性颜色
- - linear-gradient(to bottom right, red , blue)    线性颜色
-
- - width: calc(100% - 100px)     css函数计算
 
  - background-image:url()  设置背景图片
  - background-size: cover; 背景图铺满
@@ -34,25 +39,24 @@
  - background-position: center; 背景图定位 水平垂直居中
  - background-position: left center; 水平方向居左，垂直方向居中
 
-## 伪类
+## 伪类、伪元素、选择器
  - E:active       鼠标点击与释放之间的样式
  - E:hover        鼠标悬停时候的样式
  - E:link         a标签未被访问前的样式
  - E:visited      a标签已经被访问过的样式
  - E:focus        成为焦点时候的样式
  - E:checked      处于选中checkbox的样式(用于input type为radio与checkbox时)
-
-## 伪元素
  - E::after
  - E::before
 
-## 选择器
  - E *            E元素下的所有元素
  - E > F          E元素下的所有子元素F
  - E + F          紧贴在E元素之后F元素
  - E ~ F          E元素所有兄弟元素F
  - :not(E)        非E元素的所有元素
+ - E:has()         父元素选择器
 
+## 常用技巧
 ``` css
   /* 三角形 */
   .triangle_border_right {
