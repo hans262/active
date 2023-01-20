@@ -32,3 +32,8 @@
 ## 刷新host
 修改host后，需要刷新host。
 cmd: ipconfig /flushdns
+
+## google翻译失效问题
+获取ip
+ping google.cn
+修改对应host
