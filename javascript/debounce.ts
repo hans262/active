@@ -4,7 +4,7 @@
  * 只执行第一次或最后一次，忽略中间事件。
  * 
  */
-import * as  EventEmitter from 'events'
+import EventEmitter from 'node:events'
 
 namespace Test {
 	/**

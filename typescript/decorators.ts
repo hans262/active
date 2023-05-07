@@ -17,11 +17,11 @@ namespace TestDecorators {
     })
   }
 
-  @attr({
-    aaa: 'aaa',
-    bbb: 'bbb'
-  })
-  @path('/api/user')
+  // @attr({
+  //   aaa: 'aaa',
+  //   bbb: 'bbb'
+  // })
+  // @path('/api/user')
   class Test {
     ccc = 'ccc'
     say() {

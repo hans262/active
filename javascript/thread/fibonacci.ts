@@ -1,4 +1,4 @@
-import { Worker } from 'worker_threads'
+import { Worker } from 'node:worker_threads'
 
 const task = (num: number): Promise<number> => new Promise<number>((
   resolve: (data: number) => void,

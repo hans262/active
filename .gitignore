@@ -4,3 +4,4 @@ out
 logs
 .DS_Store
 docs
+dist

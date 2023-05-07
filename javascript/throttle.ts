@@ -4,7 +4,7 @@
  * 每隔相同事件，最多触发一次
  */
 
-import * as EventEmitter from 'events'
+import EventEmitter from 'node:events'
 
 namespace Test {
   function throttle(func: (...args: any[]) => void, wait: number) {
@@ -19,9 +19,9 @@ namespace Test {
     }
   }
   const myEmitter = new EventEmitter()
-  myEmitter.on('send', throttle(function(evt){
+  myEmitter.on('send', throttle(function (evt) {
     console.log(evt)
-  },1000))
+  }, 1000))
   console.log('start')
   myEmitter.emit('send', 1)
   myEmitter.emit('send', 2)
