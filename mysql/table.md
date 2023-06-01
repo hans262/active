@@ -37,6 +37,10 @@
   CREATE TABLE user3 SELECT * FROM user;
   -- 对id=1的记录进行拷贝，并存储为新表user2:
   CREATE TABLE user2 SELECT * FROM user WHERE id=1;
+  
+  -- 显示表的创建代码
+  SHOW CREATE TABLE [表名] \G;
+  SHOW CREATE TABLE user \G;
 ```
 
 ## WHERE 条件

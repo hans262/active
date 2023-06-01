@@ -72,7 +72,7 @@
   -- NOT NULL 字段不能为空
 ```
 
-### 修改表结构
+## 修改表结构
 ```sql
   -- 新增字段
   ALTER TABLE [表名] ADD [字段名] [类型];
@@ -92,4 +92,19 @@
 
   -- 修改表编码方式
   ALTER TABLE my_table CHARSET utf8;
+```
+
+## 备份
+
+```sh
+  # 备份数据库
+  mysqldump -u root -p my_db > my_db.sql
+
+  # 恢复数据库
+  # CREATE DATABASE test; 先创建一个空数据库
+  # 执行恢复
+  mysql -u root -p test < my_db.sql
+
+  # 导出表
+  mysqldump -u root -p my_db user > user.sql
 ```
