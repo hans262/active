@@ -160,3 +160,8 @@ git push -f
 git checkout B
 git cherry-pick [A分支的commits.id]
 git push
+
+
+git 默认会忽略文件大小写
+需要修改为不忽略
+git config core.ignorecase false

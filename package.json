@@ -1,9 +1,8 @@
 {
   "type": "module",
   "devDependencies": {
-    "@types/node": "^18.15.11"
-  },
-  "dependencies": {
-    "mysql2": "^3.2.1"
+    "@types/node": "^18.15.11",
+    "mysql2": "^3.5.1",
+    "openai": "^3.3.0"
   }
 }
