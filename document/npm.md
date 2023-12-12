@@ -3,33 +3,35 @@
 ## 命令
 ```sh
   # 查看全局包
-  > npm ls -g --depth 0
+  npm ls -g --depth 0
 
   # 安装到生产依赖
-  > npm i react -S
+  npm i react -S
 
-  * 安装到开发依赖
-  > npm i react -D
+  # 安装到开发依赖
+  npm i react -D
 
-  * 安装到全局
-  > npm i react -g
+  # 安装到全局
+  npm i react -g
 
-  * 安装指定版本
-  > npm i react@16.8.2
+  # 安装指定版本
+  npm i react@16.8.2
 
-  * 安装最新版本
-  > npm i react@latest
+  # 安装最新版本
+  npm i react@latest
 
-  * 初始化项目
-  > npm init my-app
+  # 初始化项目
+  npm init my-app
 
-  * 卸载包
-  > npm uni react
+  # 卸载包
+  npm uni react
+  
+  # 更新所有包
+  pnpm update
 
   yarn add
   yarn remove
   yarn install
-  
 ```
 
 ## NPM配置
@@ -63,32 +65,37 @@
   npm unpublish [包名] --force
 
 ## node版本管理
-  - n
-  适用于mac
-```
+```sh
+  # 适用于mac
   npm i n -g
   sudo n lts 安装最新版本
   sudo n 14.17.4 安装指定版本
-```
+
+  # 适用于windows
   - nvm
-  适用于windows
+```
 
 ## npm 常用的库
+```sh
+  # 监控任意dom元素宽高发生变化
+  resize-observer-polyfill
 
-- resize-observer-polyfill
-监控任意dom元素宽高发生变化
+  # React 好看滚动条
+  simplebar-react
 
-- simplebar-react
-React 的滚动条插件
+  # 幻灯片组件
+  swiper
 
-- swiper
-幻灯片组件
+  # React 拖拽库
+  react-dnd
 
-- react-dnd
-React 拖拽库
+  # React 图片懒加载库
+  react-lazy-load-image-component
 
-- react-lazy-load-image-component
-React 图片懒加载库
+  # React 砖体布局
+  react-masonry-css
 
-- react-masonry-css
-React 砖体布局
+  # 图像处理，调整大小、缩放、水印等
+  jimp # 速度有点慢
+  sharp # 需要高性能可采用该库
+```

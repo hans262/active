@@ -1,8 +1,15 @@
 {
-  "type": "module",
-  "devDependencies": {
-    "@types/node": "^18.15.11",
-    "mysql2": "^3.5.1",
+  "scripts": {
+    "dev": "serve ./"
+  },
+  "dependencies": {
+    "@types/node": "^18.17.1",
+    "jimp": "^0.22.8",
+    "mysql2": "^3.6.1",
+    "node-media-server": "^2.6.2",
     "openai": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/node-media-server": "^2.3.4"
   }
 }

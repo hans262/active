@@ -1,6 +1,7 @@
 # mysql
 
 ## 安装/连接
+
 ```sh
   # 确保mysql服务已经启动。
   mysql --version
@@ -11,15 +12,16 @@
 
   # 安装服务
   mysqld -install
-  
+
   # 启动服务
   net start mysql
 
   # 设置新密码
-  mysqladmin -u root -p password 新密码  
+  mysqladmin -u root -p password 新密码
 ```
 
 ## 库
+
 ```sql
   -- 显示所有数据库
   SHOW DATABASES;
@@ -42,6 +44,7 @@
 ```
 
 ## 表
+
 ```sql
   -- 显示所有表
   SHOW TABLES;
@@ -52,46 +55,61 @@
   SHOW FULL COLUMNS FROM my_table;
 
   -- 显示创建表的代码
+  -- 查看表的默认信息，引擎、编码等
   SHOW CREATE TABLE my_table;
 
   -- 删除表
   DROP TABLE my_table;
 
   -- 创建表
-  CREATE TABLE user(
+  CREATE TABLE table_name(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    age INT,
-    create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-  ) CHARSET=utf8;
-  -- DEFAULT 'Sandnes' 设置默认值
-  -- AUTO_INCREMENT 自增属性，一般用于主键
-  -- PRIMARY KEY 定义为主键
-  -- UNIQUE 唯一索引
-  -- NOT NULL 字段不能为空
+    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    name VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(100) DEFAULT 123456,
+    age INT DEFAULT 18
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
+
+  -- DEFAULT 'Sandnes' 默认值约束
+  -- AUTO_INCREMENT 自增列，只能是整数类型
+  -- PRIMARY KEY 主键，非空且唯一约束
+  -- UNIQUE 唯一约束
+  -- NOT NULL 非空约束
+  -- utf8mb4 可以存储特殊字符和表情，mb3则不行
+  -- InnoDB存储引起，支持外键、字增等
+  -- CHECK 检查约束，mysql > 8.0支持
+  
+
+  -- 不存在才创建
+  CREATE TABLE table_name IF NOT EXISTS(
+    -- 
+  )
+  -- 重命名
+  RENAME TABLE gorder TO gorder;
+
+  -- 修改表编码到mb4，可以支持特殊字符，表情等😊
+  ALTER TABLE table_name CONVERT TO CHARACTER SET utf8mb4 COLLATE  utf8mb4_unicode_ci;
 ```
 
 ## 修改表结构
+
 ```sql
   -- 新增字段
-  ALTER TABLE [表名] ADD [字段名] [类型];
-  ALTER TABLE my_table ADD age INT;
-  
-  -- 删除字段
-  ALTER TABLE [表名] DROP [字段名];
-  ALTER TABLE my_table DROP age;
+  ALTER TABLE table_name ADD column [类型];
 
-  -- 修改字段属性
-  ALTER TABLE my_table MODIFY age INT NOT NULL;
+  -- 删除字段
+  ALTER TABLE table_name DROP column;
+
+  -- 修改字段数据类型
+  ALTER TABLE table_name MODIFY age INT NOT NULL;
 
   -- 修改字段名称
-  AlTER TABLE [表名] CHANGE [原名] [新名] [类型];
-  ALTER TABLE my_table CHANGE username name VARCHAR;
-  AlTER TABLE user CHANGE create_at create_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP();
+  ALTER TABLE table_name CHANGE [原名] [新名] [类型];
+  AlTER TABLE table_name CHANGE name1 name2 VARCHAR(100);
 
   -- 修改表编码方式
-  ALTER TABLE my_table CHARSET utf8;
+  ALTER TABLE table_name CHARSET utf8;
 ```
 
 ## 备份

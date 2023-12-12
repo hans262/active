@@ -1,16 +1,15 @@
 /**
  * Omit ->
- * type Omit<T, K extends string | number | symbol> = { [P in Exclude<keyof T, K>]: T[P]; }
- * 辅助类型，从T类型中剔除K属性
+ * 从一个对象中排出一些属性，
+ * 得到新的类型
  */
 
 namespace TestOmit {
-  type T0 = {
-    name: string
-    age: number
-    location: string
+  interface User {
+    name: string;
+    age: number;
+    location: string;
   }
 
-  type MyOmit = Omit<T0, 'name'>
-  
+  type MyUser = Omit<User, "location">;
 }
