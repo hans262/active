@@ -1,6 +1,6 @@
 /**
  * declare ->
- * 全局申明关键词
+ * 可用来申明全局类型
  * 一般用在.d.ts文件中
  */
 namespace Testdeclare {

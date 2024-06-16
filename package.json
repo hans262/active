@@ -1,4 +1,5 @@
 {
+  "name": "note",
   "scripts": {
     "dev": "serve ./"
   },

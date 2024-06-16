@@ -34,17 +34,24 @@
   yarn install
 ```
 
-## NPM配置
-```
-  * npm镜像地址 https://registry.npmjs.org/
-  > npm get registry
-  > npm config set registry https://registry.npm.taobao.org
-  > npm config set disturl https://npm.taobao.org/dist/
+## NPM镜像地址
+可以设置包的下载地址。
+```sh
+  # 官方地址
+  https://registry.npmjs.org/
+  
+  # 淘宝地址
+  https://registry.npm.taobao.org
+  http://registry.npm.taobao.org
+  
+  # cnpm 地址
+  https://registry.npmmirror.com
 
-  * yarn镜像地址 https://registry.yarnpkg.com
-  > yarn config get registry
-  > yarn config set registry https://registry.npm.taobao.org
-  > yarn config set disturl https://npm.taobao.org/dist/
+  # 设置地址
+  npm config set registry https://registry.npm.taobao.org
+  
+  # 获取地址
+  npm get registry
 ```
 
 ## github-page 静态资源托管
@@ -85,7 +92,7 @@
 
   # 幻灯片组件
   swiper
-
+ 
   # React 拖拽库
   react-dnd
 
